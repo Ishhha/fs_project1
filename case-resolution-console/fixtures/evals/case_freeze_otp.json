@@ -1,1 +1,22 @@
-{ "case": "freeze_otp", "expected": "manual_review" }
+{
+	"id": "eval_001",
+	"title": "Card Freeze due to OTP Verification Failure",
+	"description": "Tests system's handling of repeated failed OTP attempts and automatic card freeze rule.",
+	"customer": "cust_002",
+	"input": {
+		"event_type": "login_failed",
+		"attempts": 4,
+		"device_ip": "182.68.100.22",
+		"timestamp": "2025-02-10T08:00:00Z"
+	},
+	"policies": {
+		"max_otp_attempts": 3,
+		"freeze_duration_minutes": 30
+	},
+	"expected": {
+		"agent": "FraudAgent",
+		"action": "freeze_card",
+		"reason": "Exceeded OTP failure threshold",
+		"status": "resolved"
+	}
+}

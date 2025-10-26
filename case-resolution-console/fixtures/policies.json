@@ -1,3 +1,18 @@
 [
-  { "id": 1, "name": "Policy A" }
+  {
+    "key": "blocked_mccs",
+    "value": "9999,8888"
+  },
+  {
+    "key": "high_risk_merchants",
+    "value": "CryptoExchange,ForexMart"
+  },
+  {
+    "key": "dispute_window_days",
+    "value": "60"
+  },
+  {
+    "key": "fraud_threshold_amount",
+    "value": "100000"
+  }
 ]

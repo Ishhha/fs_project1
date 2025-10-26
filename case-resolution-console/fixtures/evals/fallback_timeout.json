@@ -1,0 +1,17 @@
+{
+  "id": "eval_004",
+  "title": "LLM Timeout Fallback Handling",
+  "description": "Tests resilience when an LLM agent times out — system should use deterministic fallback plan.",
+  "customer": "cust_003",
+  "input": {
+    "triage_request": "Review large transaction delay",
+    "agents_involved": ["InsightsAgent", "ComplianceAgent"],
+    "timeout_agent": "InsightsAgent"
+  },
+  "expected": {
+    "action": "fallback_triggered",
+    "plan_used": "deterministic_plan",
+    "status": "success",
+    "message": "LLM timeout handled gracefully; fallback executed."
+  }
+}

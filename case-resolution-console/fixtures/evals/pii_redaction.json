@@ -1,0 +1,14 @@
+{
+  "id": "eval_006",
+  "title": "PII Redaction in Logs",
+  "description": "Confirms that sensitive fields (email, phone, card number) are masked before logging or exposure.",
+  "customer": "cust_001",
+  "input": {
+    "log_entry": "Customer alice.johnson@example.com reported card ending 4242.",
+    "sensitive_fields": ["email", "card_number"]
+  },
+  "expected": {
+    "redacted_output": "Customer [REDACTED_EMAIL] reported card ending [REDACTED_CARD].",
+    "passes": true
+  }
+}

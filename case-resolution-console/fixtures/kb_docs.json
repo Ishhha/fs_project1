@@ -1,3 +1,20 @@
 [
-  { "id": 1, "title": "KB Article" }
+  {
+    "id": "kb_001",
+    "title": "Duplicate Charge Resolution",
+    "body": "If the customer reports duplicate charge for same merchant within 5 minutes, initiate investigation and refund one transaction.",
+    "category": "Payments"
+  },
+  {
+    "id": "kb_002",
+    "title": "Failed Login Escalation",
+    "body": "If more than 3 failed logins detected in under 10 minutes, trigger OTP verification for the next login attempt.",
+    "category": "Security"
+  },
+  {
+    "id": "kb_003",
+    "title": "High-Value Transaction Policy",
+    "body": "Transactions exceeding ₹50,000 should be flagged for manual review by compliance agent.",
+    "category": "Compliance"
+  }
 ]

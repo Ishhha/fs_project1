@@ -1,3 +1,20 @@
 [
-  { "id": 1, "type": "fraud" }
+  {
+    "id": "alert_401",
+    "customer_id": "cust_001",
+    "type": "Duplicate Transaction",
+    "severity": "Medium",
+    "message": "Two transactions of ₹2499.99 detected at Amazon within 1 minute.",
+    "status": "Open",
+    "created_at": "2025-01-12T14:27:00Z"
+  },
+  {
+    "id": "alert_402",
+    "customer_id": "cust_002",
+    "type": "Failed Login Attempt",
+    "severity": "Low",
+    "message": "3 failed login attempts from IP 182.68.100.22",
+    "status": "Resolved",
+    "created_at": "2025-02-10T09:00:00Z"
+  }
 ]

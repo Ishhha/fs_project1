@@ -1,3 +1,63 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id         String        @id
+  name       String
+  email      String?       @unique
+  created_at DateTime      @default(now())
+  transactions Transaction[]
+  cases      Case[]
+}
+
+model Transaction {
+  id           String   @id
+  customer_id  String
+  amount       Float
+  merchant     String
+  category     String
+  occurred_at  DateTime
+  customer     Customer  @relation(fields: [customer_id], references: [id])
+}
+
+model Case {
+  id          String   @id
+  customer_id String
+  status      String
+  reason      String?
+  created_at  DateTime  @default(now())
+  events      CaseEvent[]
+  customer    Customer @relation(fields: [customer_id], references: [id])
+}
+
+model CaseEvent {
+  id          Int      @id @default(autoincrement())
+  case_id     String
+  event_type  String
+  payload     Json
+  created_at  DateTime @default(now())
+  case        Case @relation(fields: [case_id], references: [id])
+}
+
+model KbDoc {
+  id          String   @id
+  title       String
+  body        String
+  created_at  DateTime @default(now())
+}
+
+model Policy {
+  key    String @id
+  value  String
+}
 // Prisma schema placeholder
 datasource db {
   provider = "postgresql"

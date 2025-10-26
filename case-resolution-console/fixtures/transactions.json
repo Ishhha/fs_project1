@@ -1,3 +1,46 @@
 [
-  { "id": 1, "amount": 100.0 }
+  {
+    "id": "txn_301",
+    "customer_id": "cust_001",
+    "account_id": "acc_201",
+    "amount": 2499.99,
+    "currency": "INR",
+    "merchant": "Amazon India",
+    "category": "Ecommerce",
+    "occurred_at": "2025-01-12T14:25:00Z",
+    "status": "Success"
+  },
+  {
+    "id": "txn_302",
+    "customer_id": "cust_001",
+    "account_id": "acc_201",
+    "amount": 2499.99,
+    "currency": "INR",
+    "merchant": "Amazon India",
+    "category": "Ecommerce",
+    "occurred_at": "2025-01-12T14:26:00Z",
+    "status": "Success"
+  },
+  {
+    "id": "txn_303",
+    "customer_id": "cust_002",
+    "account_id": "acc_202",
+    "amount": 549.5,
+    "currency": "INR",
+    "merchant": "Swiggy",
+    "category": "Food",
+    "occurred_at": "2025-01-15T18:45:00Z",
+    "status": "Success"
+  },
+  {
+    "id": "txn_304",
+    "customer_id": "cust_003",
+    "account_id": "acc_203",
+    "amount": 9999.0,
+    "currency": "USD",
+    "merchant": "AWS Services",
+    "category": "Cloud",
+    "occurred_at": "2025-01-18T10:00:00Z",
+    "status": "Pending"
+  }
 ]

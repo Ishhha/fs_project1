@@ -1,1 +1,22 @@
-{ "case": "dispute", "expected": "refund" }
+{
+	"id": "eval_002",
+	"title": "Customer Dispute — Unauthorized Transaction",
+	"description": "Ensures triage correctly routes dispute cases for unauthorized transactions.",
+	"customer": "cust_001",
+	"input": {
+		"transaction_id": "txn_303",
+		"reason": "Unauthorized payment to Swiggy",
+		"amount": 549.5,
+		"timestamp": "2025-01-15T18:45:00Z"
+	},
+	"context": {
+		"alerts": ["alert_402"],
+		"chargebacks": []
+	},
+	"expected": {
+		"agent": "KnowledgeAgent",
+		"action": "initiate_dispute_refund",
+		"status": "resolved",
+		"notes": "Initiated dispute as per KB: 'Unauthorized transaction handling'"
+	}
+}

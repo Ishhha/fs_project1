@@ -1,3 +1,26 @@
 [
-  { "id": 1, "account_number": "ACCT123" }
+  {
+    "id": "acc_201",
+    "customer_id": "cust_001",
+    "type": "Savings",
+    "balance": 85000.75,
+    "currency": "INR",
+    "status": "Active"
+  },
+  {
+    "id": "acc_202",
+    "customer_id": "cust_002",
+    "type": "Current",
+    "balance": 120000.5,
+    "currency": "INR",
+    "status": "Active"
+  },
+  {
+    "id": "acc_203",
+    "customer_id": "cust_003",
+    "type": "Corporate",
+    "balance": 500000.0,
+    "currency": "USD",
+    "status": "Active"
+  }
 ]

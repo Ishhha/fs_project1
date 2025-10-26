@@ -1,3 +1,20 @@
 [
-  { "id": 1, "number": "4111 1111 1111 1111" }
+  {
+    "id": "card_101",
+    "customer_id": "cust_001",
+    "card_type": "Credit",
+    "network": "Visa",
+    "last4": "4242",
+    "limit": 200000,
+    "status": "Active"
+  },
+  {
+    "id": "card_102",
+    "customer_id": "cust_002",
+    "card_type": "Debit",
+    "network": "MasterCard",
+    "last4": "5544",
+    "limit": 100000,
+    "status": "Active"
+  }
 ]

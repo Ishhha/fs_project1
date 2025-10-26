@@ -1,0 +1,16 @@
+{
+  "id": "eval_005",
+  "title": "API Rate Limit Enforcement",
+  "description": "Checks if requests exceeding rate limit return HTTP 429 and recover correctly.",
+  "customer": "cust_001",
+  "input": {
+    "endpoint": "/api/triage/start",
+    "burst_requests": 10,
+    "limit": 5
+  },
+  "expected": {
+    "http_status": 429,
+    "message": "Rate limit exceeded. Try again later.",
+    "recovery_time_ms": 1000
+  }
+}

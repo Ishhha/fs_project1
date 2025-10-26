@@ -1,0 +1,20 @@
+{
+  "id": "eval_003",
+  "title": "Duplicate Charge Detection",
+  "description": "Validates the KB and Insights agents can identify duplicate transactions and suggest resolution.",
+  "customer": "cust_001",
+  "input": {
+    "transactions": ["txn_301", "txn_302"],
+    "merchant": "Amazon India",
+    "time_diff_seconds": 60
+  },
+  "context": {
+    "kb_doc": "kb_001"
+  },
+  "expected": {
+    "agent": "InsightsAgent",
+    "action": "flag_duplicate_and_refund",
+    "status": "resolved",
+    "notes": "Duplicate transactions found within 1 minute for same merchant."
+  }
+}

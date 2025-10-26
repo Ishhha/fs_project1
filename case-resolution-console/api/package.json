@@ -1,16 +1,40 @@
 {
-  "name": "case-resolution-console-api",
-  "version": "0.1.0",
-  "private": true,
+  "name": "case-resolution-api",
+  "version": "1.0.0",
+  "description": "Case Resolution Console API (Node + Express + TypeScript)",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "build": "tsc"
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest --runInBand",
+    "seed": "ts-node prisma/seed.ts",
+    "migrate": "npx prisma migrate dev",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "@prisma/client": "^6.1.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "helmet": "^7.0.0",
+    "ioredis": "^5.4.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.1"
   },
   "devDependencies": {
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.11",
+    "@types/morgan": "^1.9.6",
+    "@types/node": "^20.10.5",
+    "@types/supertest": "^2.0.16",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
   }
 }

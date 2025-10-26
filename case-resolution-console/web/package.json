@@ -1,18 +1,29 @@
 {
-  "name": "case-resolution-console-web",
-  "version": "0.1.0",
+  "name": "case-resolution-web",
+  "version": "1.0.0",
   "private": true,
+  "description": "Frontend for Case Resolution Console (React + Vite + Tailwind)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1"
   },
   "devDependencies": {
-    "vite": "^5.0.0",
-    "typescript": "^5.1.6"
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.35.0",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.4.2",
+    "vite": "^5.4.0"
   }
 }
