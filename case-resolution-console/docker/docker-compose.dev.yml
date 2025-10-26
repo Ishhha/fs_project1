@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  node_install:
+    image: node:20
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace:delegated
+    command: ["/bin/bash","/workspace/docker/install-deps.sh"]
